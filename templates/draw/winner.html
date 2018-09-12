@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content%}
+
+<div class="container">
+    <div class="jumbotron">
+    <form method="POST">
+    {% csrf_token %}
+        <button type="submit" class="btn btn-primary">Draw winner</button>
+
+
+        <p>Dette er loddene {{lodd}}</p>
+
+
+    </form>
+
+    <p>Vinnerloddet er</p>
+    <h3 class="display-3">{{winner}}</h3>
+    <p>Og navnet på vinneren er </p>
+    <h2 class="display-2">{{winning_person}}
+    </h2>
+    </div>
+</div>
+
+{% endblock %}

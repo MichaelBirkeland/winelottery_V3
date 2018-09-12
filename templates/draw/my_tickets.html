@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+
+{% block content%}
+<div class="container">
+	<div class="jumbotron">
+		<h2>SMFBs Vinlotteri</h2>
+	<div class="card">
+		<div class="card-header"> DAGENS LODD</div>
+		<div class="card-body">
+			<h5 class="card-title">Du har følgende tall til i dag  <em>{{ tz }}</em></h5>
+			<div class="card-body">
+				<p class="card-text">{% for my_tic in my_t %} {{my_tic}}, {% endfor%}</p>
+			</div>
+
+		</div>
+
+	</div>
+
+<div class="card">
+
+<div class="card-body">
+
+			<p>Dette er <em>dine</em> lodd fra tidligere</p>
+		{%	for tickets in object_list	%}
+		<p> Den {{tickets.kjopt_dato}} kjøpte <strong>{{tickets.owner}}</strong>: <strong>{{ tickets.antall_lodd }}</strong> lodd</p>
+
+		{% endfor%}
+</div>
+</div>
+
+
+	</div>
+</div>
+
+{% endblock %}

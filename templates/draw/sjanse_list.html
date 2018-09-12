@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<div class="container">
+	<div class="jumbotron">
+		<h2>SMFBs Vinlotteri</h2>
+
+		<p>Dette er <em>alle</em> lodd</p>
+		{%	for tickets in object_list	%}
+		<p> Den {{tickets.kjopt_dato}} kjøpte <strong>{{tickets.owner}}</strong>: <strong>{{ tickets.antall_lodd }}</strong> lodd</p> 
+		{% endfor%}
+			
+	</div>
+</div>
+
+{% endblock %}
