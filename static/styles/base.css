@@ -1,4 +1,18 @@
-.container {
 
 
-}
+
+/* Medium devices (tablets, 768px and up)  */
+@media (max-width: 768px) { 
+    .container {
+        background: green;
+    }
+ }
+
+
+@media (min-width: 576px) { 
+    .container {
+        background: blue;
+    }
+ }
+
+
